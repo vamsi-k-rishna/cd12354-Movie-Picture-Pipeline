@@ -98,7 +98,7 @@ jobs:
     name: Deploy Backend to EKS
     needs: [build]
     runs-on: ubuntu-latest
-    environment: prod    # <-- Added this so 'deploy' can access the prod environment secrets too!
+    environment: prod
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
