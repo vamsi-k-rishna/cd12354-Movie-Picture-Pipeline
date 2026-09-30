@@ -58,6 +58,7 @@ jobs:
     name: Build & Push Backend Image
     needs: [lint, test]
     runs-on: ubuntu-latest
+    environment: prod
     outputs:
       image_tag: ${{ steps.set-tag.outputs.tag }}
       ecr_registry: ${{ steps.login-ecr.outputs.registry }}
